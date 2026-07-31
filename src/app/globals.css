@@ -1,0 +1,124 @@
+@import "tailwindcss";
+
+/* Manual class-based dark mode (toggle adds/removes `.dark` on <html>) */
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  --cream: #faf6ef;
+  --cream-soft: #f3ecdf;
+  --sand: #e4d5b7;
+  --gold: #b6893f;
+  --gold-soft: #d9b877;
+  --espresso: #3b2a21;
+  --espresso-deep: #2a1d16;
+  --charcoal: #1b1815;
+
+  --color-bg: var(--cream);
+  --color-bg-soft: var(--cream-soft);
+  --color-surface: #ffffff;
+  --color-text: var(--charcoal);
+  --color-text-soft: #6b5c4f;
+  --color-border: #e6dcc8;
+  --color-accent: var(--gold);
+  --color-brand: var(--espresso);
+}
+
+.dark {
+  --color-bg: var(--charcoal);
+  --color-bg-soft: #221e1a;
+  --color-surface: #262019;
+  --color-text: var(--cream);
+  --color-text-soft: #c9bcaa;
+  --color-border: #3a332b;
+  --color-accent: var(--gold-soft);
+  --color-brand: var(--cream);
+}
+
+@theme inline {
+  --color-bg: var(--color-bg);
+  --color-bg-soft: var(--color-bg-soft);
+  --color-surface: var(--color-surface);
+  --color-text: var(--color-text);
+  --color-text-soft: var(--color-text-soft);
+  --color-border: var(--color-border);
+  --color-accent: var(--color-accent);
+  --color-brand: var(--color-brand);
+  --color-espresso: var(--espresso);
+  --color-espresso-deep: var(--espresso-deep);
+  --color-gold: var(--gold);
+  --color-cream: var(--cream);
+  --color-sand: var(--sand);
+
+  --font-display: var(--font-fraunces);
+  --font-sans: var(--font-inter);
+
+  --animate-fade-up: fade-up 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  --animate-fade-in: fade-in 0.6s ease forwards;
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-sans);
+}
+
+::selection {
+  background: var(--color-accent);
+  color: var(--color-espresso-deep);
+}
+
+/* Scroll-reveal: elements start hidden, JS adds .is-visible via IntersectionObserver */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+.glass {
+  background: color-mix(in srgb, var(--color-bg) 72%, transparent);
+  backdrop-filter: blur(14px) saturate(140%);
+  -webkit-backdrop-filter: blur(14px) saturate(140%);
+}
+
+.text-balance {
+  text-wrap: balance;
+}
