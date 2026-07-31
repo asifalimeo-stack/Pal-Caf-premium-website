@@ -22,18 +22,18 @@ export interface GalleryImage {
 }
 
 export const galleryImages: GalleryImage[] = [
-  { id: "g1", tag: "coffee", label: "Latte art", src: "/brand/latte-art-moody.jpg", tall: true },
+  { id: "g1", tag: "coffee", label: "Espresso pull", tall: true },
   { id: "g2", tag: "interior", label: "Coffee bar & seating", src: "/brand/interior-bar.jpg" },
-  { id: "g3", tag: "desserts", label: "Avocado toast breakfast", src: "/brand/avocado-toast-breakfast.jpg" },
-  { id: "g4", tag: "drinks", label: "Turkish tea on the patio", src: "/brand/turkish-tea-patio.jpg", tall: true },
+  { id: "g3", tag: "desserts", label: "Cheesecake slice" },
+  { id: "g4", tag: "drinks", label: "Signature iced drink", tall: true },
   { id: "g5", tag: "baristas", label: "Pouring filter coffee", src: "/brand/barista-pourover.jpg", tall: true },
   { id: "g6", tag: "exterior", label: "Etihad Plaza storefront", src: "/brand/storefront-night.jpg", tall: true },
   { id: "g7", tag: "baristas", label: "Barista at the counter", src: "/brand/barista-counter-display.jpg" },
   { id: "g8", tag: "interior", label: "Window seating nook", src: "/brand/window-seating-nook.jpg", tall: true },
   { id: "g9", tag: "customers", label: "Guests enjoying the space" },
-  { id: "g10", tag: "desserts", label: "Salad bowls & signature drink", src: "/brand/salad-bowls-pink-drink.jpg" },
+  { id: "g10", tag: "desserts", label: "Acai bowl", tall: true },
   { id: "g11", tag: "interior", label: "The PAL sign", src: "/brand/pal-sign-cups.jpg" },
-  { id: "g12", tag: "coffee", label: "Latte art on marble", src: "/brand/latte-art-marble.jpg", tall: true },
+  { id: "g12", tag: "coffee", label: "Latte art" },
   { id: "g13", tag: "interior", label: "Retail shelf & seating", src: "/brand/retail-shelf-seating.jpg" },
   { id: "g14", tag: "interior", label: "PAL branded cups", src: "/brand/cup-stack.jpg" },
   { id: "g15", tag: "drinks", label: "Cold brew" },
