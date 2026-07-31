@@ -23,7 +23,7 @@ export interface GalleryImage {
 
 export const galleryImages: GalleryImage[] = [
   { id: "g1", tag: "coffee", label: "Espresso pull", tall: true },
-  { id: "g2", tag: "interior", label: "Coffee bar & seating", src: "/brand/interior-bar.jpg" },
+  { id: "g2", tag: "interior", label: "Coffee bar & seating" },
   { id: "g3", tag: "desserts", label: "Cheesecake slice" },
   { id: "g4", tag: "drinks", label: "Signature iced drink", tall: true },
   { id: "g5", tag: "baristas", label: "Pouring filter coffee", src: "/brand/barista-pourover.jpg", tall: true },
@@ -32,12 +32,12 @@ export const galleryImages: GalleryImage[] = [
   { id: "g8", tag: "interior", label: "Window seating nook", src: "/brand/window-seating-nook.jpg", tall: true },
   { id: "g9", tag: "customers", label: "Guests enjoying the space" },
   { id: "g10", tag: "desserts", label: "Acai bowl", tall: true },
-  { id: "g11", tag: "interior", label: "The PAL sign", src: "/brand/pal-sign-cups.jpg" },
+  { id: "g11", tag: "interior", label: "The PAL sign" },
   { id: "g12", tag: "coffee", label: "Latte art" },
   { id: "g13", tag: "interior", label: "Retail shelf & seating", src: "/brand/retail-shelf-seating.jpg" },
-  { id: "g14", tag: "interior", label: "PAL branded cups", src: "/brand/cup-stack.jpg" },
+  { id: "g14", tag: "interior", label: "PAL branded cups" },
   { id: "g15", tag: "drinks", label: "Cold brew" },
-  { id: "g16", tag: "interior", label: "Counter styling", src: "/brand/plant-detail.jpg", tall: true },
+  { id: "g16", tag: "interior", label: "Counter styling", tall: true },
 ];
 
 export const galleryFilters: { id: "all" | GalleryTag; label: string }[] = [
