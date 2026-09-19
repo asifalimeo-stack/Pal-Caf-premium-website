@@ -21,6 +21,7 @@ export function Navbar() {
   }, []);
 
   useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect -- close the mobile menu whenever the route changes
     setOpen(false);
   }, [pathname]);
 
