@@ -9,6 +9,7 @@ export function CookieConsent() {
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect -- reads browser-only state, which is only available after mount
     if (!localStorage.getItem(STORAGE_KEY)) setVisible(true);
   }, []);
 

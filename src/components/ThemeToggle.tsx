@@ -7,6 +7,7 @@ export function ThemeToggle({ className = "" }: { className?: string }) {
   const [isDark, setIsDark] = useState(false);
 
   useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect -- reads browser-only state, which is only available after mount
     setIsDark(document.documentElement.classList.contains("dark"));
   }, []);
 
